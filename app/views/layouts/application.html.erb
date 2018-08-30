@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Woofcation</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% unless notice.blank? %>
+      <%= notice %>
+    <% end %>
+    <% unless alert.blank? %>
+      <%= alert %>
+    <% end %>
+    
+    <%= yield %>
+  </body>
+</html>
